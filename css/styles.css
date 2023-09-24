@@ -529,16 +529,15 @@ img {
 
 .modal-list-wrapper {
   display: flex;
-  gap: 24px;
+  gap: 16px;
 }
 
 .text-footer-form {
   color: #fff;
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.5; /* 150% */
+  line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-bottom: 16px;
 }
 
 .footer-modal-label {
@@ -617,6 +616,8 @@ input {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-open {
@@ -626,37 +627,32 @@ input {
 }
 
 .modal {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
   display: block;
   border-radius: 4px;
   background-color: #fcfcfc;
   max-width: 408px;
-  max-height: 584px;
-  height: 100%;
+  min-height: 584px;
   width: 100%;
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
   overflow-y: auto;
-}
-
-label {
-  color: #8e8f99;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.16;
-  letter-spacing: 0.04em;
-  padding-bottom: 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input {
   padding-left: 38px;
-  width: 360px;
+  width: 100%;
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  outline: none;
-  transition-property: border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  outline: transparent;
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:active,
@@ -670,9 +666,7 @@ label {
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:active + .modal-icons,
@@ -689,11 +683,23 @@ label {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
-  padding-top: 48px;
+}
+
+.modal-label {
+  display: block;
+  margin-bottom: 4px;
+  color: #8e8f99;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
 }
 
 .modal-wrapper {
-  display: block;
+  margin-bottom: 16px;
+}
+
+.modal-label-wrapper {
   margin-bottom: 8px;
 }
 
@@ -702,11 +708,12 @@ label {
 }
 
 .modal-textarea {
-  width: 360px;
-  min-height: 120px;
+  width: 100%;
+  height: 120px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.16;
@@ -714,9 +721,7 @@ label {
   padding: 8px 16px;
   resize: none;
   outline: none;
-  transition-property: border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-textarea:active,
@@ -728,16 +733,12 @@ label {
 .modal-privacy-policy {
   color: #8e8f99;
   font-size: 12px;
-  font-weight: 400;
-  line-height: 11.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
-  max-width: 338px;
-  max-height: 16px;
 }
+
 .modal-checkbox {
-  display: block;
-  width: 360px;
-  height: 16px;
+  margin-bottom: 24px;
 }
 
 .modal-link {
@@ -745,32 +746,33 @@ label {
   text-decoration: underline;
 }
 
-.modal-close {
+.checkbox-span .modal-close {
   position: absolute;
   top: 24px;
   right: 24px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #e7e9fc;
-  border: 1px solid #e7e9fc;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover,
 .modal-close:focus {
   background-color: #404bbf;
+  border: none;
 }
 
 .modal-close-icons {
-  display: block;
-  margin: auto;
   fill: #2e2f42;
-  transition-property: stroke;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover .modal-close-icons,
