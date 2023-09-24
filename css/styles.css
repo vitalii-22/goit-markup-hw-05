@@ -538,41 +538,49 @@ img {
   font-weight: 500;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+
+.footer-modal-label {
+  display: flex;
+  gap: 24px;
 }
 
 .footer-input {
-  max-width: 264px;
-  width: 100%;
-  max-height: 40px;
-  height: 100%;
+  width: 264px;
+  height: 40px;
   border-radius: 4px;
-  border: 1px solid #fff;
+  border: 1px solid #ffffff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  padding: 8px 16px;
-  background-color: #2e2f42;
+  padding-left: 16px;
+  background-color: transparent;
   color: #fff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   font-size: 12px;
   font-weight: 400;
-  line-height: 2;
+  line-height: 1.5;
   letter-spacing: 0.04em;
 }
 
 .footer-input::placeholder {
   color: #fff;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 2;
-  letter-spacing: 0.04em;
 }
 
 .footer-button {
-  max-width: 165px;
-  width: 100%;
-  max-height: 40px;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 165px;
+  height: 40px;
   cursor: pointer;
   border: none;
   border-radius: 4px;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.04em;
   background-color: #4d5ae5;
   transition-property: background-color;
   transition-duration: 250ms;
@@ -585,26 +593,9 @@ img {
   background-color: #404bbf;
 }
 
-.button-footer-text {
-  color: #fff;
-  text-align: center;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-}
-
-.footer-button .button-footer-wrapper {
-  display: inline-flex;
-  padding: 8px 24px;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-}
-
 .button-footer-icon {
   fill: #ffffff;
+  margin-left: 16px;
 }
 
 /*  End Footer sections */

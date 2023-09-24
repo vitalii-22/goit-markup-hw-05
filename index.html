@@ -468,32 +468,36 @@
           </ul>
         </div>
         <div class="modal-footer">
-          <label class="text-footer-form" for="email">Subscribe</label>
-
-          <div class="modal-list-wrapper">
+          <p class="text-footer-form" for="email">Subscribe</p>
+          <form class="modal-list-wrapper">
+            <label class="footer-modal-label" for="footer-email">
             <input
               class="footer-input"
-              id="email"
+              id="footer-email"
               type="email"
               placeholder="E-mail"
             />
             <button class="footer-button" type="submit">
-              <div class="button-footer-wrapper">
-                <p class="button-footer-text">Subscribe</p>
-                <svg class="button-footer-icon" width="24" height="24">
-                  <use href="/images/icons.svg#icon-frame"></use>
-                </svg>
-              </div>
+              Subscribe
+              <svg class="button-footer-icon" width="24" height="24">
+                <use href="/images/icons.svg#icon-frame"></use>
+              </svg>
+              </label>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </footer>
 
     <!-- Modal sections  -->
 
-    <div class="backdrop is-open">
+    <div class="backdrop">
       <div class="modal">
+        <button class="modal-close">
+          <svg class="modal-close-icons" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
         <p class="modal-text">Leave your contacts and we will call you back</p>
         <div class="modal-wrapper">
           <label for="user-name">Name</label>
@@ -559,12 +563,6 @@
             <a class="modal-link" href="">Privacy Policy</a></label
           >
         </div>
-
-        <button class="modal-close">
-          <svg class="modal-close-icons" width="8" height="8">
-            <use href="./images/icons.svg#icon-close"></use>
-          </svg>
-        </button>
 
         <button type="submit" class="button-send">Send</button>
       </div>
