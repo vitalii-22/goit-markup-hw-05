@@ -522,14 +522,13 @@ img {
 .modal-footer {
   display: flex;
   flex-direction: column;
-  gap: 16px;
   max-width: 453px;
   width: 100%;
 }
 
 .modal-list-wrapper {
   display: flex;
-  gap: 16px;
+  gap: 24px;
 }
 
 .text-footer-form {
@@ -538,6 +537,7 @@ img {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-bottom: 16px;
 }
 
 .footer-modal-label {
