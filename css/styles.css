@@ -580,6 +580,7 @@ img {
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.04em;
+  line-height: 1.5;
   background-color: #4d5ae5;
   transition-property: background-color;
   transition-duration: 250ms;
@@ -716,11 +717,11 @@ input {
   background-color: transparent;
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   padding: 8px 16px;
   resize: none;
-  outline: none;
+  outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -750,23 +751,20 @@ input {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  fill: transparent;
+  fill: #fff;
   margin-right: 8px;
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  ransition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-privacy-policy:checked + .checkbox-icon {
+.checkbox-privacy:checked + .modal-privacy-policy .checkbox-span {
   background-color: #404bbf;
   border: none;
-}
-
-.modal-privacy-policy:checked .checkbox-icon {
   fill: #f4f4fd;
 }
 
