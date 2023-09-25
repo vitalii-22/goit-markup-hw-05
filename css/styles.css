@@ -751,7 +751,7 @@ input {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  fill: #fff;
+  fill: transparent;
   margin-right: 8px;
   width: 16px;
   height: 16px;
